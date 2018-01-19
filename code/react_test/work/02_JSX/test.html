@@ -7,6 +7,28 @@
 <body>
   <div id="test1"></div>
   <div id="test2"></div>
+<script type="text/javascript" src="../js/react.development.js"></script>
+<script type="text/javascript" src="../js/react-dom.development.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+<script type="text/javascript">
+    //创建虚拟的DOM 	var element = React.createElement('h1', {id:'myTitle'},'hello')
+//    用纯生的js创建
+//    创建数据
+    const msg = 'I Like You'
+    const myId = 'Atguigu'
+    const vDom1 = React.createElement('h2',{id:myId},msg.toUpperCase())
+  //  渲染虚拟的DOM
+//  ReactDOM.render(vDom1,document.getElementById('test1'))
+    const domContainer = document.getElementById('test1')
+//  debugger
+  ReactDOM.render(vDom1,domContainer)
+</script>
+<script type="text/babel">
+ //用jsx创建DOM虚拟对象
+ const vDom2 = <h3 id={myId.toLowerCase()}>{msg.toLowerCase()}</h3>
+//  渲染虚拟DOM对象
+  ReactDOM.render(vDom2,document.getElementById('test2'))
 
+</script>
 </body>
 </html>

@@ -16,6 +16,14 @@
     /*
      功能: 动态展示列表数据
      */
+//    创建列表数据
+    const names = ['jQuery','zepto','angular','react','vue']
+//    创建虚拟的DOM
+    var ul = <ul>{
+        names.map((name,index)=><li key={index}>{name}</li>)
+    }</ul>
+//    渲染虚拟的DOM
+    ReactDOM.render(ul,document.getElementById('example1'))
   </script>
 </body>
 </html>
